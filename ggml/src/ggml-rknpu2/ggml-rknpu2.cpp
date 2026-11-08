@@ -1355,6 +1355,9 @@ static ggml_backend_buffer_t ggml_backend_rknpu_buffer_type_alloc_buffer(ggml_ba
         /* .cpy_tensor    = */ NULL,
         /* .clear         = */ ggml_backend_rknpu_buffer_clear,
         /* .reset         = */ NULL,
+        /* .set_tensor_n  = */ NULL,
+        /* .get_tensor_n  = */ NULL,
+        /* .cpy_tensor_n  = */ NULL,
     };
 
     return ggml_backend_buffer_init(buft, rknpu_buffer_interface, ctx, size);
